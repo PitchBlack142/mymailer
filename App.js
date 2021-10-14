@@ -13,8 +13,8 @@ const works = 'It Works'
 let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD
+      user: 'katedavidwhitton@gmail.com',
+      pass: 'ogunlade44'
   }
 });
 
@@ -23,14 +23,6 @@ router.get('/', (req, res) => {
 
   router.use("/public", express.static(__dirname + "/public"));
   res.sendFile(abPath);
-  
-  router.get('/json', (req, res) =>{
-    if(process.env.MESSAGE_STYLE === uppercase){
-      res.json({message: 'HELLO JSON'})
-    }else{
-      res.json({message: 'Hello json'})
-    }
-})
 });
 
 router.get('/now', (req, res, next)=>{
