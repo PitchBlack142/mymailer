@@ -1,0 +1,7 @@
+.env
+/node_modules
+/myApp
+/.vscode
+nodesender.js
+sender.js
+apple.js
